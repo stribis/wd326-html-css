@@ -1,0 +1,86 @@
+/*
+  Selector Scavenger Hunt
+  Rule: try to complete all targets without editing index.html.
+
+  1. Style the page title using a type selector.
+  2. Style every card using the shared .card class.
+  3. Make only the featured card visually stronger.
+  4. Style external links that open in a new tab.
+  5. Style direct list items in the main navigation.
+  6. Style the first paragraph after each article heading.
+  7. Style cards that contain an image with :has().
+  8. Style empty status badges differently with :empty.
+  9. Add keyboard focus styles with :focus-visible.
+  10. Use :where() for low-specificity base link styling.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: #151923;
+  background: #f7f4ed;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body > * {
+  width: min(1100px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+/* Start your scavenger rules below. */
+
+h1 {
+  color: orangered !important;
+}
+
+.card {
+  border: solid 1px black;
+}
+
+.card.featured {
+  background: hotpink;
+}
+
+a[target="_blank"] {
+  color: powderblue;
+}
+
+nav li {
+  background: greenyellow;
+}
+
+article h3 + p {
+  border: dashed red 2px;
+}
+
+.card:has(img) {
+  border-radius: 15px;
+}
+
+.status:empty {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: purple;
+} 
+
+:focus-visible {
+  outline: 8px ridge rgb(170 50 220 / 0.6);
+  border-radius: 2rem;
+}
+
+:where() a {
+  color: red;
+}
+
