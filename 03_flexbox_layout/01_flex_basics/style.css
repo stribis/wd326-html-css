@@ -1,0 +1,33 @@
+/* Small Reset */
+*::before, *::after, * {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 800px;
+  height: 500px;
+  background: #222;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  gap: 2rem;
+}
+
+.item {
+  width: 75px;
+  height: 75px;
+  background: limegreen;
+  border: solid 1px green;
+}
