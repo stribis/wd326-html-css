@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tables</title>
+  <style>
+    /* Small Reset */
+    *::before, *::after, * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      padding: 2rem;
+    }
+
+    .image-format {
+      border-collapse: collapse;
+    }
+
+    .image-format th, .image-format td{
+      /* border: solid 1px black; */
+      padding: 1rem;
+    }
+
+    .image-format tr {
+      border: solid 1px grey;
+    }
+
+    .image-format {
+      border: solid 2px black;
+    } 
+    
+    .image-format thead tr {
+      background: navy;
+      color: white;
+    }
+
+    .chessboard td {
+      width: 50px;
+      height: 50px;
+    }
+
+    .chessboard tr:nth-child(odd) td:nth-child(even),.chessboard tr:nth-child(even) td:nth-child(odd) {
+      background: black;
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <table class="image-format">
+    <caption>Image format decision table</caption>
+    <thead>
+      <tr>
+        <th>Format</th>
+        <th>Transparency</th>
+        <th>Best for</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>JPEG</th>
+        <td>No</td>
+        <td>Photos</td>
+      </tr>
+      <tr>
+        <th>PNG</th>
+        <td>Yes</td>
+        <td>Sharp graphics</td>
+      </tr>
+      <tr>
+        <th>SVG</th>
+        <td>Yes</td>
+        <td>Icons and logos</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="chessboard">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+</body>
+</html>

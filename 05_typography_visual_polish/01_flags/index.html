@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flags</title>
+  <style>
+    .flag {
+      width: 500px;
+      height: 350px;
+      margin: 1rem 0;
+    }
+
+    .colombia {
+      background: linear-gradient(
+        to bottom,
+        yellow 0 50%,
+        blue 50% 75%,
+        red 75% 100%
+      );
+    }
+
+    .italy {
+      background: linear-gradient(
+        to right,
+        green 0 33.3%,
+        white 33.3% 66.6%,
+        red 66.6% 100%
+      );
+    }
+
+    .zimbabwe {
+      background: linear-gradient(
+        to bottom,
+        green 0 calc(1/7 * 100%),
+        yellow calc(1/7 * 100%) calc(2/7 * 100%),
+        red calc(2/7 * 100%) calc(3/7 * 100%),
+        black calc(3/7 * 100%) calc(4/7 * 100%),
+        red calc(4/7 * 100%) calc(5/7 * 100%),
+        yellow calc(5/7 * 100%) calc(6/7 * 100%),
+        green calc(6/7 * 100%) 100%
+
+      )
+    }
+
+    .tanzania {
+      background: linear-gradient(
+        to bottom right,
+        green 40%,
+        yellow 40% 45%,
+        black 45% 55%,
+        yellow 55% 60%,
+        blue 60% 100%
+
+      )
+    }
+
+    .america {
+      background: repeating-linear-gradient(
+        to bottom,
+        red 0 calc(1/13 * 100%),
+        white calc(1/13 * 100%) calc(2/13 * 100%)
+      );
+      position: relative;
+    }
+
+    .america::before {
+      position: absolute;
+      content: '';
+      width: 40%;
+      height: 50%;
+      background: blue;
+    }
+
+    .switzerland {
+      height: 350px;
+      width: 350px;
+      background: red;
+      position: relative;
+    }
+    
+    .switzerland::before {
+      position: absolute;
+      content: '';
+      width: 250px;
+      height: 75px;
+      background: white;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .switzerland::after {
+      position: absolute;
+      content: '';
+      height: 250px;
+      width: 75px;
+      background: white;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="flag colombia"></div>
+  <div class="flag italy"></div>
+  <div class="zimbabwe flag"></div>
+  <div class="tanzania flag"></div>
+  <div class="america flag"></div>
+  <div class="switzerland"></div>
+</body>
+</html>
