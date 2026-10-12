@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Drills - Solution</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="drill-header">
+      <a class="logo" href="#top">Static Noise</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#topics">Topics</a></li>
+          <li><a href="#release">Release</a></li>
+          <li class="account"><a href="#account">Account</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="top">
+      <header class="page-intro"><p class="eyebrow">Lesson 03</p><h1>Flexbox Drills</h1><p>Complete all four visual areas without changing the HTML.</p></header>
+      <section id="topics" class="drill-section" aria-labelledby="topics-title">
+        <h2 id="topics-title">Wrapping topics</h2>
+        <ul class="tag-list"><li>HTML</li><li>CSS</li><li>Selectors</li><li>Flexbox</li><li>Units</li><li>DevTools</li><li>Accessibility</li><li>Typography</li></ul>
+      </section>
+      <section id="release" class="drill-section" aria-labelledby="release-title">
+        <h2 id="release-title">Media object</h2>
+        <article class="media-object"><img src="https://placecats.com/240/240" alt="Cat portrait used as album artwork" width="240" height="240" /><div><p class="eyebrow">New release</p><h3>Night Lines</h3><p>Warm synthesizers and field recordings built for the last train home.</p><a href="#listen">Listen to the release</a></div></article>
+      </section>
+      <section class="drill-section" aria-labelledby="cards-title">
+        <h2 id="cards-title">Flexible cards</h2>
+        <div class="card-row">
+          <article class="practice-card"><h3>Track notes</h3><p>A short introduction.</p><a class="button" href="#notes">Read notes</a></article>
+          <article class="practice-card"><h3>Studio diary</h3><p>A much longer description creates uneven content height so the action alignment is easy to test.</p><a class="button" href="#diary">Open diary</a></article>
+          <article class="practice-card"><h3>Tour dates</h3><p>Autumn dates are now online.</p><a class="button" href="#tour">See dates</a></article>
+        </div>
+      </section>
+      <section class="drill-section" aria-labelledby="align-title"><h2 id="align-title">Individual alignment</h2><div class="alignment-demo"><span>A</span><span class="special-item">B</span><span>C</span></div></section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Image Performance Pass - Solution</title><link rel="stylesheet" href="styles.css" /></head><body><main>
+  <!-- The likely LCP image is eager and high priority; dimensions reserve its space. -->
+  <header class="hero"><div><p class="eyebrow">Night Lines</p><h1>Image Performance Pass</h1><p>The hero is likely the largest above-the-fold image.</p></div><img src="images/hero.jpg" alt="Cat stretched across a studio keyboard" width="999" height="700" fetchpriority="high" /></header>
+  <!-- Off-screen gallery images can wait, but still declare dimensions. -->
+  <section class="gallery" aria-labelledby="gallery-title"><h2 id="gallery-title">Studio gallery</h2><img src="images/gallery-one.jpg" alt="Cat peeking over a mixing desk" width="640" height="420" loading="lazy" decoding="async" /><img src="images/gallery-two.jpg" alt="Cat beside a microphone" width="640" height="420" loading="lazy" decoding="async" /><img src="images/gallery-three.jpg" alt="Cat resting near audio equipment" width="640" height="420" loading="lazy" decoding="async" /></section>
+</main></body></html>

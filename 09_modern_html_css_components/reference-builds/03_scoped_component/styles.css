@@ -1,0 +1,31 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #18211e; background: #eef1ed; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { width: min(58rem, calc(100% - 2rem)); margin-inline: auto; padding-block: 3rem; }
+
+.theme-dark,
+.theme-light,
+.unscoped-note {
+  margin-block: 1rem;
+  padding: 1.25rem;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  background: #fff;
+}
+
+a { color: #176b5a; font-weight: 800; }
+
+/* The limit keeps this theme from leaking into the final aside. */
+@scope (.theme-dark) to (.unscoped-note) {
+  :scope { background: #18211e; color: #f7f1e4; }
+  h2 { color: #f0c84b; }
+  a { color: #8fd8c7; }
+}
+
+@scope (.theme-light) {
+  :scope { background: #fffdf8; color: #18211e; }
+  h2 { color: #176b5a; }
+  a { color: #a43d2d; }
+}
+
+.unscoped-note { background: #dfe5df; }

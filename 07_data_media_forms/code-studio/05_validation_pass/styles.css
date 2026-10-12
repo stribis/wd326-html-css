@@ -1,0 +1,11 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.5; color: #17211d; background: #f4f0e7; }
+main { width: min(42rem, 100%); margin-inline: auto; padding-block: 3rem; }
+h1 { margin: 0; font-size: clamp(3rem, 8vw, 5rem); }
+.eyebrow { font-weight: 800; text-transform: uppercase; }
+.field, fieldset { margin-block: 1.25rem; }
+.field label { display: block; font-weight: 750; }
+.hint { margin-block: .25rem; color: #4f5a53; }
+input, textarea, button { max-width: 100%; padding: .65rem; font: inherit; }
+
+/* Add post-interaction valid and invalid states below. */

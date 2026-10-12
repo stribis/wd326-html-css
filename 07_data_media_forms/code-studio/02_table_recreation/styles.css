@@ -1,0 +1,10 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 1rem; font-family: system-ui, sans-serif; color: #17211d; background: #f4f0e7; }
+main { width: min(70rem, 100%); margin-inline: auto; }
+header, section { padding-block: 3rem; }
+h1 { margin: 0; font-size: clamp(3rem, 8vw, 6rem); }
+.eyebrow { font-weight: 800; text-transform: uppercase; }
+.data-table { width: 100%; border-collapse: collapse; background: #fff; }
+.data-table th, .data-table td { padding: .8rem; border: 1px solid #758078; text-align: left; }
+
+/* Add useful caption, header, row, and numeric-column styling. */

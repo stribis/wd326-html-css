@@ -1,0 +1,22 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.5; color: #17211d; background: #f4f0e7; }
+main { width: min(42rem, 100%); margin-inline: auto; padding-block: 3rem; }
+h1 { margin: 0; font-size: clamp(3rem, 8vw, 5rem); }
+.eyebrow { font-weight: 800; text-transform: uppercase; }
+form { margin-block-start: 2rem; }
+.field, fieldset, .check-row { margin-block: 1.25rem; }
+.field label { display: block; margin-block-end: .4rem; font-weight: 750; }
+input, select, textarea, button { font: inherit; }
+input[type="text"], input[type="email"], input[type="file"], select, textarea { width: 100%; min-height: 44px; padding: .7rem; border: 2px solid #59635d; border-radius: .2rem; color: #17211d; background: #fff; }
+textarea { min-height: 8rem; resize: vertical; }
+fieldset { padding: 1rem; border: 2px solid #59635d; }
+fieldset label { display: inline-flex; align-items: center; gap: .4rem; min-height: 44px; margin-inline-end: 1rem; }
+input[type="radio"], input[type="checkbox"] { width: 1.2rem; height: 1.2rem; accent-color: #126754; }
+.check-row { display: flex; align-items: center; gap: .5rem; min-height: 44px; }
+/* Keep the native file input, but style its dedicated button pseudo-element. */
+input::file-selector-button { min-height: 36px; margin-inline-end: .75rem; border: 0; padding-inline: .8rem; color: #fff; background: #17211d; font: inherit; font-weight: 750; cursor: pointer; }
+button { min-height: 44px; padding: .7rem 1rem; border: 2px solid #17211d; color: #fff; background: #17211d; font-weight: 800; cursor: pointer; }
+button:hover, input::file-selector-button:hover { color: #17211d; background: #d8b83f; }
+input:disabled { color: #5e6661; background: #d9ddd9; border-style: dashed; cursor: not-allowed; }
+/* Focus stays distinct from hover so keyboard location is always visible. */
+:focus-visible { outline: 4px solid #bd3c24; outline-offset: 3px; }

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Event Card - Reference</title>
+    <!-- Version and integrity hash are locked together. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <style>
+      :root { --studio: #087f8c; --studio-dark: #075f68; }
+      .text-studio { color: var(--studio-dark); }
+      .btn-studio { --bs-btn-color: #fff; --bs-btn-bg: var(--studio); --bs-btn-border-color: var(--studio-dark); --bs-btn-hover-color: #fff; --bs-btn-hover-bg: var(--studio-dark); --bs-btn-focus-shadow-rgb: 8, 127, 140; }
+      .event-image { aspect-ratio: 16 / 10; object-fit: cover; }
+    </style>
+  </head>
+  <body class="bg-light text-dark">
+    <main class="container py-5">
+      <header class="p-4 p-md-5 mb-4 border border-2 rounded-3 bg-white shadow-sm">
+        <p class="text-studio fw-bold text-uppercase mb-2">Bootstrap edition</p>
+        <h1 class="display-3 fw-bold lh-1">Northbank Open Studios</h1>
+        <p class="lead col-lg-8">Meet local artists, join practical workshops, and explore the studios behind this year's program.</p>
+        <a class="btn btn-outline-dark" href="#events">Browse events</a>
+      </header>
+
+      <section id="events" class="row g-4" aria-label="Featured events">
+        <div class="col-md-6 col-xl-4">
+          <article class="card h-100 shadow-sm">
+            <img class="card-img-top event-image" src="https://placecats.com/640/420" alt="Cat looking toward the camera in a softly lit room" width="640" height="420" />
+            <div class="card-body d-flex flex-column">
+              <p class="text-studio small fw-bold text-uppercase mb-2">Workshop - Saturday 14:00</p>
+              <h2 class="h3 card-title">Print &amp; Pattern</h2>
+              <p class="card-text">Create a two-color poster using simple relief-printing techniques.</p>
+              <a class="btn btn-studio mt-auto align-self-start" href="#signup">Reserve a place</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <article class="card h-100 shadow-sm">
+            <img class="card-img-top event-image" src="https://placecats.com/641/420" alt="Cat resting beside art materials" width="640" height="420" />
+            <div class="card-body d-flex flex-column">
+              <p class="text-studio small fw-bold text-uppercase mb-2">Talk - Saturday 16:30</p>
+              <h2 class="h3 card-title">Making a Practice</h2>
+              <p class="card-text">Three artists discuss routines, research, and sustainable creative work.</p>
+              <a class="btn btn-studio mt-auto align-self-start" href="#signup">Reserve a place</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <article class="card h-100 shadow-sm">
+            <img class="card-img-top event-image" src="https://placecats.com/642/420" alt="Cat sitting among colorful paper shapes" width="640" height="420" />
+            <div class="card-body d-flex flex-column">
+              <p class="text-studio small fw-bold text-uppercase mb-2">Studio tour - Sunday 11:00</p>
+              <h2 class="h3 card-title">Behind the Work</h2>
+              <p class="card-text">A guided walk through four studios and their current projects.</p>
+              <button class="btn btn-secondary mt-auto align-self-start" type="button" disabled>Fully booked</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <form id="signup" class="row g-3 align-items-end mt-4 p-4 border border-2 rounded-3 bg-white">
+        <div class="col-md"><label class="form-label fw-bold" for="bootstrap-email">Email address</label><input class="form-control form-control-lg" id="bootstrap-email" name="email" type="email" autocomplete="email" required /></div>
+        <div class="col-md-auto"><button class="btn btn-studio btn-lg w-100" type="submit">Join event updates</button></div>
+      </form>
+    </main>
+  </body>
+</html>

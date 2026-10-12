@@ -1,0 +1,38 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #18211e; background: #e9ede9; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { width: min(52rem, calc(100% - 2rem)); margin-inline: auto; padding-block: 12vh; }
+
+.event-card {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border: 2px solid #18211e;
+  border-radius: 8px;
+  background: #fffdf8;
+  box-shadow: 8px 8px 0 #c8d2cc;
+
+  /* & represents the complete .event-card selector. */
+  &:hover { box-shadow: 4px 4px 0 #c8d2cc; }
+  &:focus-within { outline: 4px solid #d65a43; outline-offset: 4px; }
+  & h1 { margin-block: 0.2rem 0.7rem; font-size: clamp(1.8rem, 5vw, 3.4rem); }
+  & p { line-height: 1.55; }
+  & a { color: #176b5a; font-weight: 800; }
+
+  /* This layout change belongs to the component, so the at-rule is nested. */
+  @media (width < 34rem) {
+    flex-direction: column;
+    & .event-card__date { align-self: flex-start; }
+  }
+}
+
+.event-card__date {
+  flex: 0 0 5rem;
+  margin: 0;
+  padding: 1rem 0.5rem;
+  background: #f0c84b;
+  font-weight: 900;
+  text-align: center;
+}
+
+.event-card__meta { margin: 0; color: #58615d; font-weight: 700; }

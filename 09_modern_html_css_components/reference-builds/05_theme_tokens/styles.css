@@ -1,0 +1,52 @@
+:root {
+  color-scheme: light dark;
+  /* Literal fallbacks come before the newer color functions. */
+  --surface: #fffdf8;
+  --text: #18211e;
+  --border: #9aa59f;
+  --brand: #176b5a;
+  --accent: #b84230;
+  --card-tint: #e5f2ee;
+  --brand-hover: #0f5043;
+
+  --surface: light-dark(#fffdf8, #15201c);
+  --text: light-dark(#18211e, #f6f0e5);
+  --border: light-dark(#9aa59f, #65736c);
+  --brand: light-dark(#176b5a, #8fd8c7);
+  --accent: light-dark(#b84230, #ff9b88);
+  --card-tint: color-mix(in oklch, var(--brand) 14%, var(--surface));
+  --brand-hover: color-mix(in oklch, var(--brand) 76%, var(--text));
+
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--surface);
+  color: var(--text);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--surface); color: var(--text); }
+main { width: min(52rem, calc(100% - 2rem)); margin-inline: auto; padding-block: 10vh; }
+.eyebrow { color: var(--brand); font-weight: 800; text-transform: uppercase; }
+h1 { max-width: 12ch; font-size: clamp(2.8rem, 8vw, 6rem); line-height: 0.95; }
+
+.session-card {
+  max-width: 36rem;
+  padding: 1.5rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-tint);
+}
+
+.tag { color: var(--accent); font-weight: 800; }
+.session-card p { line-height: 1.55; }
+.session-card a {
+  display: inline-block;
+  padding: 0.7rem 0.9rem;
+  border-radius: 5px;
+  background: var(--brand);
+  color: var(--surface);
+  font-weight: 800;
+  text-decoration: none;
+
+  &:hover { background: var(--brand-hover); }
+  &:focus-visible { outline: 4px solid var(--accent); outline-offset: 4px; }
+}

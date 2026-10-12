@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Native Pattern Choice - Reference</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Native HTML Lab</p>
+      <h1>Choose behavior before appearance</h1>
+
+      <!-- details supplies disclosure behavior and keyboard semantics without scripting. -->
+      <section class="pattern">
+        <h2>FAQ answer</h2>
+        <details><summary>What is the attendance policy?</summary><p>Tell your lecturer early if you cannot attend.</p></details>
+      </section>
+
+      <!-- A modal decision uses dialog; invoker commands open and close it declaratively. -->
+      <section class="pattern">
+        <h2>Delete project</h2>
+        <button type="button" commandfor="delete-dialog" command="show-modal">Delete project</button>
+        <dialog id="delete-dialog">
+          <h3>Delete this project?</h3>
+          <p>This action cannot be undone.</p>
+          <button type="button" commandfor="delete-dialog" command="close">Cancel</button>
+          <button class="danger" type="button">Delete permanently</button>
+        </dialog>
+      </section>
+
+      <!-- A non-modal floating menu is a popover, while its destinations remain links. -->
+      <section class="pattern">
+        <h2>Account menu</h2>
+        <button type="button" popovertarget="account-menu">Open account menu</button>
+        <nav id="account-menu" popover aria-label="Account"><a href="#profile">Profile</a><a href="#sign-out">Sign out</a></nav>
+      </section>
+
+      <section class="pattern">
+        <h2>Username help</h2>
+        <label for="username">Username</label>
+        <input id="username" name="username" aria-describedby="username-help" />
+        <p id="username-help">Use 4 to 20 letters, numbers, or underscores.</p>
+      </section>
+
+      <section class="pattern">
+        <h2>Documentation</h2>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements">Open the HTML element reference</a>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: #17211d; background: #f4f0e7; }
+main { width: min(60rem, 100%); margin-inline: auto; padding-block: 5rem; }
+h1 { max-width: 12ch; margin-block: 0 1rem; font-size: clamp(3rem, 9vw, 7rem); line-height: .95; }
+.label { font-size: .8rem; font-weight: 800; text-transform: uppercase; }
+nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+a { color: #126754; font-weight: 750; }

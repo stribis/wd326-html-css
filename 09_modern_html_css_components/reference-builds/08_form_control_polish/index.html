@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Control Polish - Reference</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Preference controls</h1>
+      <form>
+        <fieldset>
+          <legend>Native accent</legend>
+          <label><input type="checkbox" name="notes" checked /> Send workshop notes</label>
+          <label for="volume">Preview volume</label>
+          <input id="volume" type="range" min="0" max="100" value="65" />
+        </fieldset>
+        <fieldset>
+          <legend>Custom appearance</legend>
+          <label><input class="custom-control" type="checkbox" name="reminders" /> Deadline reminders</label>
+          <label><input class="custom-control" type="checkbox" name="archive" checked disabled /> Archive completed work</label>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>

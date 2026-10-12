@@ -9,6 +9,15 @@
 # Local History for Visual Studio Code
 .history/
 
+# Local package installations
+node_modules/
+
+# Local development caches
+.vite/
+
+# Internal exercise planning
+EXERCISE-INVENTORY.md
+
 # Built Visual Studio Code Extensions
 *.vsix
 

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Form Foundations - Solution</title><link rel="stylesheet" href="styles.css" /></head><body><main><header><p class="eyebrow">Lesson 07</p><h1>Artist Event Booking</h1><p>Native controls with complete labels, names, and grouping.</p></header>
+  <!-- Every successful control needs a name; labels and fieldsets provide its accessible context. -->
+  <form action="success.html" method="get">
+    <div class="field"><label for="full-name">Full name</label><input id="full-name" name="full_name" type="text" autocomplete="name" /></div>
+    <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" /></div>
+    <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+    <div class="field"><label for="portfolio">Portfolio URL</label><input id="portfolio" name="portfolio" type="url" autocomplete="url" /></div>
+    <div class="field"><label for="visit-date">Visit date</label><input id="visit-date" name="visit_date" type="date" /></div>
+    <div class="field"><label for="arrival-time">Arrival time</label><input id="arrival-time" name="arrival_time" type="time" /></div>
+    <div class="field"><label for="guests">Guest count</label><input id="guests" name="guests" type="number" /></div>
+    <div class="field"><label for="interest">Interest level</label><input id="interest" name="interest" type="range" /></div>
+    <div class="field"><label for="badge-color">Badge color</label><input id="badge-color" name="badge_color" type="color" /></div>
+    <div class="field"><label for="accessibility-file">Accessibility document</label><input id="accessibility-file" name="accessibility_file" type="file" accept=".pdf,.txt" /></div>
+    <fieldset><legend>Ticket type</legend><label><input name="ticket" type="radio" value="student" /> Student</label><label><input name="ticket" type="radio" value="standard" /> Standard</label><label><input name="ticket" type="radio" value="supporter" /> Supporter</label></fieldset>
+    <div class="field"><label for="session">Preferred session</label><select id="session" name="session"><option value="morning">Morning</option><option value="afternoon">Afternoon</option><option value="evening">Evening</option></select></div>
+    <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5"></textarea></div>
+    <label class="check-row"><input name="updates" type="checkbox" value="yes" /> Send event updates</label>
+    <button type="submit">Reserve a place</button>
+  </form>
+</main></body></html>

@@ -1,0 +1,19 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #18211e; background: #eef1ed; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { width: min(58rem, calc(100% - 2rem)); margin-inline: auto; padding-block: 3rem; }
+
+/* Baseline styling remains useful when @scope is unavailable. */
+.theme-dark,
+.theme-light,
+.unscoped-note {
+  margin-block: 1rem;
+  padding: 1.25rem;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  background: #fff;
+}
+
+a { color: #176b5a; font-weight: 800; }
+
+/* TODO: Add scoped light and dark themes. Stop the dark scope at the note. */

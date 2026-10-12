@@ -1,0 +1,9 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.5; color: #17211d; background: #f4f0e7; }
+main { width: min(70rem, 100%); margin-inline: auto; }
+header { padding-block: 4rem; }
+h1 { margin: 0; font-size: clamp(3rem, 8vw, 6rem); }
+.eyebrow { font-weight: 800; text-transform: uppercase; }
+.scenario-list { display: flex; flex-wrap: wrap; gap: 1rem; }
+.scenario-list article { flex: 1 1 20rem; padding: 1.25rem; border: 2px solid #17211d; background: #fff; }
+.scenario-list span { font-weight: 850; color: #126754; }

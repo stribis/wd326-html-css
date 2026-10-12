@@ -1,0 +1,31 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 1rem; font-family: system-ui, sans-serif; color: #17211d; background: #f4f0e7; }
+main { width: min(70rem, 100%); margin-inline: auto; }
+header { padding-block: 3rem; }
+h1 { margin: 0; font-size: clamp(2.5rem, 7vw, 5rem); }
+.eyebrow, figcaption { font-weight: 800; text-transform: uppercase; }
+.flag-grid { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem; }
+figure { flex: 1 1 18rem; margin: 0; }
+.flag { position: relative; width: 100%; aspect-ratio: 3 / 2; margin-block-end: .6rem; border: 1px solid rgb(0 0 0 / 25%); overflow: hidden; }
+
+.colombia { background: linear-gradient(to bottom, #fcd116 0 50%, #003893 50% 75%, #ce1126 75%); }
+.italy { background: linear-gradient(to right, #009246 0 33.333%, #fff 33.333% 66.666%, #ce2b37 66.666%); }
+
+/* Seven equal stripes form the field. Two triangles create a dark border. */
+.zimbabwe { background: linear-gradient(to bottom, #198a3b 0 14.285%, #f7d618 14.285% 28.57%, #d8202f 28.57% 42.855%, #111 42.855% 57.14%, #d8202f 57.14% 71.425%, #f7d618 71.425% 85.71%, #198a3b 85.71%); }
+.zimbabwe::before, .zimbabwe::after { content: ""; position: absolute; inset-block: 0; inset-inline-start: 0; clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.zimbabwe::before { width: 48%; background: #111; }
+.zimbabwe::after { z-index: 1; width: 43%; background: #fff; }
+.flag-star { position: absolute; z-index: 2; inset-block-start: 50%; inset-inline-start: 9%; color: #d8202f; font-size: clamp(1.5rem, 5vw, 3rem); line-height: 1; transform: translateY(-50%); }
+
+.tanzania { background: linear-gradient(147deg, #1eb53a 0 39%, #fcd116 39% 44%, #111 44% 56%, #fcd116 56% 61%, #00a3dd 61%); }
+
+.usa { background: repeating-linear-gradient(to bottom, #b22234 0 calc(100% / 13), #fff calc(100% / 13) calc(200% / 13)); }
+.usa::before { content: ""; position: absolute; inset-block-start: 0; inset-inline-start: 0; width: 40%; height: calc(700% / 13); background: #3c3b6e; }
+.usa::after { content: "* * * * * *\A * * * * *\A* * * * * *\A * * * * *\A* * * * * *"; position: absolute; inset-block-start: 3%; inset-inline-start: 3%; color: #fff; font-family: monospace; font-size: clamp(.45rem, 1.7vw, .9rem); line-height: 1.1; white-space: pre; }
+
+/* The Swiss field is square; both bars share the same center. */
+.switzerland { width: min(100%, 18rem); aspect-ratio: 1; background: #d52b1e; }
+.switzerland::before, .switzerland::after { content: ""; position: absolute; inset-block-start: 50%; inset-inline-start: 50%; background: #fff; transform: translate(-50%, -50%); }
+.switzerland::before { width: 62.5%; height: 20%; }
+.switzerland::after { width: 20%; height: 62.5%; }

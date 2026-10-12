@@ -1,0 +1,207 @@
+@layer reset, base, components, states;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  p,
+  figure {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #17211d;
+    background: #f4f0e7;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* :where() keeps the base rule deliberately easy to override. */
+  :where(a) {
+    color: #126754;
+    text-decoration-thickness: 0.12em;
+    text-underline-offset: 0.2em;
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: 1.05;
+  }
+
+  h1 {
+    font-size: clamp(3.5rem, 12vw, 8rem);
+  }
+
+  h2 {
+    margin-block-end: 1rem;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+  }
+
+  p + p {
+    margin-block-start: 1rem;
+  }
+}
+
+@layer components {
+  .site-header,
+  .section,
+  .site-footer {
+    width: min(68rem, calc(100% - 2rem));
+    margin-inline: auto;
+  }
+
+  .site-header {
+    padding-block: 1.25rem;
+    border-bottom: 2px solid #17211d;
+  }
+
+  .logo {
+    color: #17211d;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .nav-list {
+    margin-block-start: 0.75rem;
+  }
+
+  .nav-list li {
+    display: inline-block;
+    margin-block: 0.25rem;
+    margin-inline-end: 1rem;
+  }
+
+  .hero {
+    width: min(68rem, calc(100% - 2rem));
+    min-height: 80svh;
+    margin-inline: auto;
+    padding-block: clamp(3rem, 10vh, 8rem);
+  }
+
+  .hero > div {
+    max-width: 44rem;
+  }
+
+  .hero > div > p:not(.eyebrow) {
+    max-width: 38rem;
+    margin-block: 1.25rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  .hero-media {
+    max-width: 32rem;
+    margin-block-start: 3rem;
+  }
+
+  figcaption {
+    margin-block-start: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .section {
+    padding-block: clamp(3rem, 8vh, 6rem);
+    border-top: 1px solid #9caa9f;
+  }
+
+  .section > p {
+    max-width: 62ch;
+  }
+
+  .eyebrow,
+  time {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 0.8rem 1.1rem;
+    border: 2px solid #17211d;
+    color: #ffffff;
+    background: #17211d;
+    font-weight: 750;
+    text-decoration: none;
+  }
+
+  /* The attribute selector makes external destinations visible. */
+  a[target="_blank"]::after {
+    content: " [external]";
+    font-size: 0.72em;
+  }
+
+  .release-card,
+  .show-card {
+    max-width: 48rem;
+    margin-block-start: 1rem;
+    padding: 1.25rem;
+    border: 2px solid #17211d;
+    background: #ffffff;
+  }
+
+  /* The card changes only when its content includes an image. */
+  .release-card:has(img) {
+    border-color: #126754;
+    box-shadow: 0.6rem 0.6rem 0 #d9b840;
+  }
+
+  .release-card img {
+    margin-block-end: 1.25rem;
+  }
+
+  .release-card h3,
+  .show-card h3 {
+    margin-block: 0.4rem;
+    font-size: 1.5rem;
+  }
+
+  .site-footer {
+    padding-block: 2rem;
+    border-top: 2px solid #17211d;
+  }
+}
+
+@layer states {
+  :where(a):hover {
+    text-decoration-thickness: 0.2em;
+  }
+
+  .button:hover {
+    color: #17211d;
+    background: #d9b840;
+  }
+
+  :focus-visible {
+    outline: 4px solid #bd3c24;
+    outline-offset: 4px;
+  }
+}

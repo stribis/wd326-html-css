@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f6f3eb; color: #172033; font-family: Inter, system-ui, sans-serif; }
+main { width: min(64rem, calc(100% - 2rem)); margin-inline: auto; padding-block: 3rem; }
+.page-header { padding: 2rem; border: 2px solid #172033; background: #fff; }
+.page-header p { color: #075f68; font-weight: 900; text-transform: uppercase; }
+.page-header h1 { max-width: 14ch; margin: 0; font-size: 4rem; line-height: 0.95; }
+.card-list { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+.notice-card { flex: 1 1 20rem; padding: 2rem; border: 2px solid #087f8c; border-radius: 6px; background: #e7f5f6; color: #172033; }
+.notice-card h2 { margin-block: 0 0.5rem; }
+.notice-card p { line-height: 1.55; }
+.notice-card a { color: #075f68; font-weight: 900; text-underline-offset: 0.2em; }
+.notice-card a:focus-visible { outline: 3px solid #075f68; outline-offset: 4px; }
+.notice-card__meta { color: #075f68; font-weight: 900; text-transform: uppercase; }
+.notice-card.warning { border-color: #8a5a00; background: #fff3c4; }
+.notice-card.warning .notice-card__meta { color: #6f4700; }
+.notice-card.warning a { color: #6f4700; }
+/* TODO: Refactor the architecture without changing the HTML. */

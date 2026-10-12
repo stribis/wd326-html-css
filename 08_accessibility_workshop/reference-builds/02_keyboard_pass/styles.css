@@ -1,0 +1,16 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; color: #17211d; background: #f4f0e7; }
+.site-header, main > section, footer { width: min(68rem, calc(100% - 2rem)); margin-inline: auto; }
+.site-header { display: flex; align-items: center; gap: 1rem; padding-block: 1rem; }
+.site-header nav { display: flex; gap: 1rem; margin-left: auto; }
+.hero { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; min-height: 80svh; }
+.hero > * { flex: 1 1 20rem; }
+main > section { padding-block: 3rem; border-top: 1px solid #778079; }
+h1 { font-size: clamp(3rem, 9vw, 7rem); line-height: .95; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: #126754; font-weight: 750; }
+.button { display: inline-block; padding: .7rem 1rem; border: 2px solid; }
+.skip-link { position: fixed; z-index: 10; inset-block-start: .5rem; inset-inline-start: .5rem; padding: .7rem 1rem; color: #fff; background: #17211d; transform: translateY(-150%); }
+.skip-link:focus { transform: translateY(0); }
+/* Keyboard focus is visible without forcing the same ring on pointer clicks. */
+:focus-visible { outline: 4px solid #bd3c24; outline-offset: 4px; }

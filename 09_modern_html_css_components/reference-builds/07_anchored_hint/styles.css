@@ -1,0 +1,42 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #18211e; background: #f2eee6; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { width: min(34rem, calc(100% - 2rem)); margin-inline: auto; padding-block: 14vh; }
+form { display: grid; gap: 0.8rem; }
+.label-row { display: flex; align-items: center; justify-content: space-between; }
+label { font-weight: 800; }
+input, button { min-height: 44px; font: inherit; }
+input { padding: 0.6rem; border: 2px solid #7d8983; border-radius: 5px; }
+button { padding: 0.6rem 0.85rem; border: 2px solid #18211e; border-radius: 5px; background: #f0c84b; font-weight: 800; }
+
+.hint-trigger {
+  inline-size: 44px;
+  padding: 0;
+  border-radius: 50%;
+  anchor-name: --name-help;
+}
+
+.hint {
+  /* Readable fallback for browsers without anchor positioning. */
+  position: fixed;
+  inset: auto 1rem 1rem auto;
+  width: min(20rem, calc(100% - 2rem));
+  margin: 0;
+  padding: 1rem;
+  border: 2px solid #18211e;
+  border-radius: 6px;
+  background: #fffdf8;
+  color: #18211e;
+}
+
+@supports (position-area: right) {
+  .hint {
+    position-anchor: --name-help;
+    inset: auto;
+    position-area: right;
+    position-try-fallbacks: flip-inline, flip-block;
+    margin-inline-start: 0.75rem;
+  }
+}
+
+:focus-visible { outline: 4px solid #d9573f; outline-offset: 3px; }

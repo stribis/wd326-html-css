@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Responsive Images - Solution</title><link rel="stylesheet" href="styles.css" /></head><body><main><header><p class="eyebrow">Lesson 06</p><h1>Responsive Images</h1></header>
+  <!-- srcset offers the same composition at several resolutions. -->
+  <section><h2>Resolution switching</h2><img class="content-image" src="images/cat-960.jpg" srcset="images/cat-480.jpg 480w, images/cat-960.jpg 960w, images/cat-1440.jpg 1440w" sizes="(max-width: 720px) calc(100vw - 2rem), 56rem" alt="Cat relaxing beside a studio window" width="960" height="640" /></section>
+  <!-- picture changes the crop because narrow screens need a different composition. -->
+  <section><h2>Art direction</h2><picture><source media="(max-width: 600px)" srcset="images/cat-portrait.jpg" /><img class="content-image" src="images/cat-wide.jpg" alt="Cat looking toward a bright window" width="1200" height="675" /></picture></section>
+  <section><h2>Decorative CSS background</h2><div class="css-hero"><strong>Night Lines</strong></div></section>
+</main></body></html>

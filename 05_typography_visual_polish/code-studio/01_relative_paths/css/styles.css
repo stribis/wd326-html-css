@@ -1,0 +1,7 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { width: min(48rem, calc(100% - 2rem)); margin: 0 auto; padding-block: 3rem; font-family: system-ui, sans-serif; line-height: 1.5; color: #17211d; background: #f4f0e7; }
+img { display: block; max-width: 100%; height: auto; margin-block: 2rem; border: 3px solid #17211d; }
+h1 { margin: 0; font-size: clamp(3rem, 9vw, 6rem); line-height: .95; }
+.eyebrow { font-weight: 800; text-transform: uppercase; }
+a { color: #126754; font-weight: 750; }
+:focus-visible { outline: 4px solid #bd3c24; outline-offset: 4px; }

@@ -1,0 +1,19 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #151923; background: #e9eeea; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { width: min(62rem, calc(100% - 2rem)); margin-inline: auto; padding-block: 3rem; }
+.eyebrow { color: #1f7a68; font-weight: 900; text-transform: uppercase; }
+h1 { max-width: 12ch; font-size: clamp(2.5rem, 7vw, 5.5rem); line-height: 0.95; }
+.tile-grid { display: flex; flex-wrap: wrap; gap: 2rem; padding: 2rem; border: 2px dashed #7f8a84; }
+.tile { flex: 1 1 15rem; min-height: 11rem; padding: 1.2rem; border: 2px solid #151923; border-radius: 8px; background: #fffdf7; box-shadow: 7px 7px 0 rgb(21 25 35 / 0.14); }
+.tile span { color: #1f7a68; font-weight: 900; }
+
+/* Individual properties are convenient when operations need separate control. */
+.translate { translate: 18px -10px; }
+.rotate { rotate: 8deg; }
+.scale { scale: 1.12; }
+.origin { transform-origin: left bottom; rotate: -8deg; }
+
+/* The transform list is evaluated in order, so these do not land together. */
+.order-a { transform: translateX(35px) rotate(12deg); }
+.order-b { transform: rotate(12deg) translateX(35px); }

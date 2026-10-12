@@ -1,0 +1,39 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; color: #171c1a; background: #f4f0e7; }
+.page-header, main { width: min(68rem, calc(100% - 2rem)); margin-inline: auto; }
+.page-header { padding-block: 4rem; }
+h1 { margin: 0; font-size: clamp(3rem, 8vw, 6rem); }
+.eyebrow { font-weight: 800; text-transform: uppercase; }
+.station { min-height: 20rem; padding-block: 3rem; border-top: 2px solid #171c1a; }
+.position-card, .broken-card { width: min(28rem, 100%); padding: 2rem; border: 2px solid #171c1a; background: #fff; }
+.badge, .escaped-badge { padding: 0.4rem 0.65rem; color: #fff; background: #bd3c24; font-weight: 800; }
+.relative-stage { display: flex; gap: 1rem; padding: 2rem; background: #fff; }
+.relative-stage span { padding: 1rem; border: 1px solid #171c1a; }
+.poster { max-width: 45rem; margin: 0; }
+.poster img { display: block; width: 100%; height: auto; }
+.overlay { padding: 2rem; color: #fff; background: rgb(0 0 0 / 65%); font-size: 2rem; font-weight: 800; }
+.scroll-station { min-height: 80rem; }
+.sticky-title { padding: 1rem; background: #d8b83f; }
+.back-to-top { padding: 0.8rem 1rem; color: #fff; background: #171c1a; }
+:focus-visible { outline: 4px solid #bd3c24; outline-offset: 4px; }
+
+/* 1: absolute uses the nearest positioned ancestor: .position-card. */
+.position-card { position: relative; }
+.badge { position: absolute; inset-block-start: 1rem; inset-inline-end: 1rem; }
+
+/* 2: relative keeps the original flow slot while moving the painted box. */
+.relative-note { position: relative; inset-block-start: 2rem; inset-inline-start: 1rem; }
+
+/* 3: the overlay fills all four edges of the positioned figure. */
+.poster { position: relative; }
+.overlay { position: absolute; inset: 0; display: grid; place-items: center; }
+
+/* 4: sticky is constrained by its section and needs a non-auto offset. */
+.sticky-title { position: sticky; top: 0; z-index: 1; }
+
+/* 5: adding this context stops the badge from escaping to the page. */
+.broken-card { position: relative; }
+.escaped-badge { position: absolute; inset-block-start: 1rem; inset-inline-end: 1rem; }
+
+/* 6: fixed attaches the control to the viewport. */
+.back-to-top { position: fixed; inset-block-end: 1rem; inset-inline-end: 1rem; z-index: 2; }

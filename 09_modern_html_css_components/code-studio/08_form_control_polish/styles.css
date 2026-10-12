@@ -1,0 +1,10 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #18211e; background: #eef1ed; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { width: min(42rem, calc(100% - 2rem)); margin-inline: auto; padding-block: 8vh; }
+form { display: grid; gap: 1rem; }
+fieldset { display: grid; gap: 1rem; padding: 1.25rem; border: 2px solid #7d8983; border-radius: 8px; background: #fffdf8; }
+legend { padding-inline: 0.35rem; font-weight: 900; }
+label { display: flex; gap: 0.75rem; align-items: center; font-weight: 700; }
+input { font: inherit; }
+/* TODO: Add native accent styling and rebuild every custom checkbox state. */

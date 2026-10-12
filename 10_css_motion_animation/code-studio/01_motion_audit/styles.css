@@ -1,0 +1,27 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #151923; background: #f7f4ed; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; font-weight: 800; }
+.site-header, main { width: min(70rem, calc(100% - 2rem)); margin-inline: auto; }
+.site-header { display: flex; justify-content: space-between; align-items: center; padding-block: 1.25rem; }
+nav { display: flex; gap: 1rem; }
+.logo { color: #1f7a68; font-size: 1.3rem; text-decoration: none; animation: wobble 1s infinite; }
+.announcement { padding: 0.75rem; background: #efc84a; font-weight: 900; text-align: center; animation: flash 600ms infinite alternate; }
+.hero { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; min-height: 58vh; }
+.hero > div:first-child { flex: 1 1 32rem; }
+.eyebrow { color: #1f7a68; font-weight: 900; text-transform: uppercase; }
+h1 { max-width: 10ch; margin-block: 0; font-size: clamp(3rem, 9vw, 7rem); line-height: 0.9; }
+.button { display: inline-block; margin-top: 1rem; padding: 0.8rem 1rem; border: 2px solid; border-radius: 6px; background: #efc84a; text-decoration: none; animation: bounce 700ms infinite alternate; }
+.spinner { flex: 0 1 16rem; aspect-ratio: 1; border: 2rem dotted #1f7a68; border-radius: 50%; animation: spin 2s linear infinite; }
+.cards { display: flex; flex-wrap: wrap; gap: 1rem; padding-block: 2rem 4rem; }
+.cards article { flex: 1 1 16rem; padding: 1.25rem; border: 2px solid; border-radius: 8px; background: #fffdf7; animation: float 900ms ease-in-out infinite alternate; }
+.status { display: inline-block; padding: 0.3rem 0.5rem; border-radius: 999px; background: #e86f51; color: #fff; font-weight: 900; animation: pulse 500ms infinite alternate; }
+
+@keyframes wobble { to { rotate: 8deg; } }
+@keyframes flash { to { background: #e86f51; color: #fff; } }
+@keyframes bounce { to { translate: 0 -12px; } }
+@keyframes spin { to { rotate: 1turn; } }
+@keyframes float { to { translate: 0 -14px; } }
+@keyframes pulse { to { scale: 1.18; } }
+
+/* TODO: Repair the motion after completing the audit. */

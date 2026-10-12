@@ -1,0 +1,9 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 1rem; font-family: system-ui, sans-serif; color: #17211d; background: #f4f0e7; }
+main { width: min(60rem, 100%); margin-inline: auto; padding-block: 5rem; }
+h1 { margin: 0; font-size: clamp(3rem, 8vw, 6rem); }
+.eyebrow { font-weight: 800; text-transform: uppercase; }
+.control-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-block-start: 3rem; }
+svg { width: 1.4rem; height: 1.4rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Add complete control sizing and interaction states below. */

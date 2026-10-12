@@ -1,0 +1,2 @@
+/* The fallback stack still renders readable text if the service is unavailable. */
+body { font-family: "Inter", Arial, Helvetica, sans-serif; }

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoped Component - Reference</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Scoped themes</h1>
+      <section class="theme-dark">
+        <h2>Night programme</h2>
+        <p>The outer shell supplies the dark theme.</p>
+        <a href="#night">View programme</a>
+        <article class="theme-light">
+          <h2>Featured daytime session</h2>
+          <p>The nearest scope controls this nested card.</p>
+          <a href="#day">View session</a>
+        </article>
+        <aside class="unscoped-note">
+          <h2>Outside the component limit</h2>
+          <p>This note keeps the neutral page treatment.</p>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

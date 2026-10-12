@@ -1,0 +1,35 @@
+@use "../settings" as s;
+@use "../tools" as t;
+
+.button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: s.$space-unit * 1.5 s.$space-unit * 2;
+  border: 2px solid var(--color-accent-dark);
+  border-radius: s.$radius;
+  font: inherit;
+  font-weight: 850;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--primary {
+    background: var(--color-accent);
+    color: var(--color-surface);
+  }
+
+  &--secondary {
+    background: var(--color-surface);
+    color: var(--color-accent-dark);
+  }
+
+  &:focus-visible {
+    @include t.focus-ring(var(--color-accent-dark));
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

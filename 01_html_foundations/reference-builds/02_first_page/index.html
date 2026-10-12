@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A first semantic HTML page about learning web development."
+    />
+    <title>My First Website</title>
+  </head>
+  <body>
+    <header>
+      <h1>My First Website</h1>
+      <!-- A list communicates that these links form a related navigation set. -->
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <p>
+          I am learning how semantic HTML gives web content structure and
+          meaning before any visual styles are added.
+        </p>
+        <img
+          src="https://placecats.com/640/420"
+          alt="Curious cat looking toward the camera"
+          width="640"
+          height="420"
+        />
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <p>
+          Email me at
+          <a href="mailto:student@example.com">student@example.com</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p><small>Copyright 2026 Web Development Student</small></p>
+    </footer>
+  </body>
+</html>

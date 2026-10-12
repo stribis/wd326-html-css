@@ -1,0 +1,43 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; color: #17211d; background: #f4f0e7; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: #126754; }
+:focus-visible { outline: 4px solid #bd3c24; outline-offset: 4px; }
+.drill-header, .page-intro, .drill-section { width: min(70rem, calc(100% - 2rem)); margin-inline: auto; }
+.drill-header { padding-block: 1rem; border-bottom: 2px solid #17211d; }
+.logo { font-size: 1.25rem; font-weight: 800; }
+.nav-list, .tag-list { margin: 0; padding: 0; list-style: none; }
+.page-intro { padding-block: 4rem; }
+.page-intro h1 { margin: 0; font-size: clamp(3rem, 9vw, 6rem); line-height: 0.95; }
+.eyebrow { font-size: 0.8rem; font-weight: 800; text-transform: uppercase; }
+.drill-section { padding-block: 2.5rem; border-top: 1px solid #9caa9f; }
+.tag-list li { padding: 0.45rem 0.75rem; border: 1px solid #17211d; background: #ffffff; }
+.media-object, .practice-card { padding: 1.25rem; border: 2px solid #17211d; background: #ffffff; }
+.media-object img { width: 10rem; }
+.practice-card .button { display: inline-block; padding: 0.65rem 0.9rem; color: #ffffff; background: #17211d; }
+.alignment-demo { min-height: 12rem; padding: 1rem; border: 2px solid #17211d; background: #ffffff; }
+.alignment-demo span { display: block; padding: 1rem 1.5rem; color: #ffffff; background: #126754; }
+
+/* Tasks 1-3: the header is a flex row; nav grows and the logo cannot shrink. */
+.drill-header { display: flex; align-items: center; gap: 1.5rem; }
+.logo { flex-shrink: 0; }
+.drill-header nav { flex: 1; }
+.nav-list { display: flex; align-items: center; gap: 1rem; }
+.nav-list .account { margin-left: auto; }
+
+/* Task 4: wrapping keeps every topic visible when one line is full. */
+.tag-list { display: flex; flex-wrap: wrap; gap: 0.65rem; }
+
+/* Task 5: image and text become direct flex items. */
+.media-object { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.25rem; }
+.media-object img { flex: 0 0 10rem; }
+.media-object > div { flex: 1 1 18rem; }
+
+/* Tasks 6-7: cards share space, wrap, and push their own actions down. */
+.card-row { display: flex; flex-wrap: wrap; align-items: stretch; gap: 1rem; }
+.practice-card { flex: 1 1 14rem; display: flex; flex-direction: column; }
+.practice-card .button { align-self: flex-start; margin-top: auto; }
+
+/* Task 8: one item overrides the container's cross-axis alignment. */
+.alignment-demo { display: flex; align-items: flex-start; gap: 1rem; }
+.special-item { align-self: flex-end; }

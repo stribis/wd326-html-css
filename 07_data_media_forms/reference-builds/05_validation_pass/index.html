@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Validation Pass - Solution</title><link rel="stylesheet" href="styles.css" /></head><body><main><header><p class="eyebrow">Lesson 07</p><h1>Validation Pass</h1></header><form action="success.html" method="get">
+  <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
+  <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+  <div class="field"><label for="date">Visit date</label><input id="date" name="date" type="date" min="2026-09-12" max="2026-09-13" required /></div>
+  <div class="field"><label for="guests">Guest count</label><input id="guests" name="guests" type="number" min="1" max="6" step="1" required /></div>
+  <fieldset><legend>Ticket type</legend><label><input name="ticket" type="radio" value="student" required /> Student</label><label><input name="ticket" type="radio" value="standard" /> Standard</label></fieldset>
+  <div class="field"><label for="message">Message</label><p class="hint" id="message-hint">Write 20-300 characters.</p><textarea id="message" name="message" rows="6" minlength="20" maxlength="300" aria-describedby="message-hint" required></textarea></div>
+  <button type="submit">Check and submit</button>
+</form></main></body></html>

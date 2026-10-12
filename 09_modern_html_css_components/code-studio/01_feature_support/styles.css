@@ -1,0 +1,68 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #17211d;
+  background: #f4f0e7;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+main {
+  width: min(48rem, calc(100% - 2rem));
+  margin-inline: auto;
+  padding-block: 12vh;
+}
+
+.eyebrow {
+  color: #176b5a;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 12ch;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  line-height: 0.95;
+}
+
+.intro {
+  max-width: 42rem;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+button {
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border: 2px solid #17211d;
+  border-radius: 6px;
+  background: #f0c84b;
+  color: #17211d;
+  font: inherit;
+  font-weight: 800;
+}
+
+.help-trigger {
+  /* TODO: Give the trigger the anchor name --help-trigger. */
+}
+
+.help-panel {
+  /* This is the baseline: readable even without anchor positioning. */
+  position: fixed;
+  inset: auto 1rem 1rem auto;
+  width: min(22rem, calc(100% - 2rem));
+  margin: 0;
+  padding: 1rem;
+  border: 2px solid #17211d;
+  border-radius: 6px;
+  background: #fffdf8;
+  color: #17211d;
+  box-shadow: 6px 6px 0 rgb(23 33 29 / 0.18);
+}
+
+/* TODO: Add an @supports block for position-area: top. */
+
+:focus-visible {
+  outline: 4px solid #d9573f;
+  outline-offset: 4px;
+}

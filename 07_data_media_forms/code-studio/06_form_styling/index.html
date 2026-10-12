@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Form Styling</title><link rel="stylesheet" href="styles.css" /></head><body><main><header><p class="eyebrow">Lesson 07</p><h1>Form Styling</h1></header><form>
+  <div class="field"><label for="name">Full name</label><input id="name" type="text" autocomplete="name" /></div>
+  <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="email" /></div>
+  <div class="field"><label for="session">Session</label><select id="session"><option>Morning</option><option>Afternoon</option></select></div>
+  <fieldset><legend>Ticket type</legend><label><input type="radio" name="ticket" checked /> Student</label><label><input type="radio" name="ticket" /> Standard</label></fieldset>
+  <label class="check-row"><input type="checkbox" /> Send updates</label>
+  <div class="field"><label for="file">Reference file</label><input id="file" type="file" /></div>
+  <div class="field"><label for="code">Invitation code</label><input id="code" type="text" value="INVITE-2026" disabled /></div>
+  <div class="field"><label for="message">Message</label><textarea id="message" rows="5"></textarea></div>
+  <button type="submit">Submit booking</button>
+</form></main></body></html>

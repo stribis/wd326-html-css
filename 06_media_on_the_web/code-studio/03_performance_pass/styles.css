@@ -1,0 +1,11 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; color: #17211d; background: #f4f0e7; }
+main { width: min(72rem, calc(100% - 2rem)); margin-inline: auto; }
+.hero { min-height: 100svh; display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; }
+.hero > * { flex: 1 1 24rem; }
+h1 { margin: 0; font-size: clamp(3rem, 8vw, 6rem); line-height: .95; }
+.eyebrow { font-weight: 800; text-transform: uppercase; }
+img { display: block; max-width: 100%; height: auto; background: #c8c1b3; }
+.gallery { display: flex; flex-wrap: wrap; gap: 1rem; padding-block: 4rem; }
+.gallery h2 { flex-basis: 100%; }
+.gallery img { flex: 1 1 18rem; width: min(100%, 24rem); }

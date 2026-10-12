@@ -1,0 +1,7 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.55; color: #17211d; background: #f4f0e7; }
+main { width: min(65rem, 100%); margin-inline: auto; padding-block: 3rem; }
+h1 { margin: 0; font-size: clamp(3rem, 8vw, 6rem); }
+.eyebrow { font-weight: 800; text-transform: uppercase; }
+.barrier-list { padding: 0; list-style-position: inside; }
+.barrier-list li { margin-block: 1rem; padding: 1rem; border: 2px solid #17211d; background: #fff; }

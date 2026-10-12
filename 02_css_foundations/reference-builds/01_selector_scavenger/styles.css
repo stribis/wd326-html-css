@@ -1,0 +1,146 @@
+@layer reset, base, layout, components, states;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+}
+
+@layer base {
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    color: #151923;
+    background: #f7f4ed;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Target 10: :where() contributes no specificity of its own. */
+  :where(a) {
+    color: #176957;
+    text-decoration-thickness: 0.12em;
+    text-underline-offset: 0.2em;
+  }
+
+  /* Target 1: a type selector reaches every h1. */
+  h1 {
+    max-width: 12ch;
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    line-height: 0.95;
+  }
+}
+
+@layer layout {
+  body > * {
+    width: min(70rem, calc(100% - 2rem));
+    margin-inline: auto;
+  }
+
+  header,
+  main,
+  footer {
+    padding-block: 2rem;
+  }
+
+  section,
+  aside {
+    margin-block: 2rem;
+  }
+
+  .nav-list {
+    padding: 0;
+    list-style: none;
+  }
+
+  /* Target 5: only direct children of the main navigation list match. */
+  .nav-list > li {
+    display: inline-block;
+    margin-block: 0.5rem;
+    margin-inline-end: 1rem;
+  }
+}
+
+@layer components {
+  /* Target 2: the reusable class styles every card. */
+  .card {
+    max-width: 44rem;
+    margin-block: 1.25rem;
+    padding: 1.5rem;
+    border: 2px solid #151923;
+    background: #ffffff;
+  }
+
+  /* Target 3: combining two classes narrows the rule to one card. */
+  .card.featured {
+    border-width: 4px;
+    box-shadow: 0.75rem 0.75rem 0 #efc84a;
+  }
+
+  /* Target 4: the attribute selector finds links opening a new tab. */
+  a[target="_blank"] {
+    color: #9b2f22;
+    font-weight: 700;
+  }
+
+  a[target="_blank"]::after {
+    content: " [external]";
+    font-size: 0.75em;
+  }
+
+  /* Target 6: + selects only the paragraph immediately after an h3. */
+  .card h3 + p {
+    margin-block-start: 0.75rem;
+    font-size: 1.1rem;
+  }
+
+  /* Target 7: the parent card reacts to an image inside it. */
+  .card:has(img) {
+    border-color: #176957;
+    background: #f0fff9;
+  }
+
+  .status {
+    display: inline-block;
+    margin-block: 0.8rem;
+    padding: 0.25rem 0.55rem;
+    background: #151923;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 750;
+    text-transform: uppercase;
+  }
+
+  /* Target 8: an empty badge receives visible generated content. */
+  .status:empty::before {
+    content: "Regular";
+  }
+}
+
+@layer states {
+  button,
+  a {
+    border-radius: 0.15rem;
+  }
+
+  /* Target 9: preserve focus, but emphasize keyboard navigation. */
+  :focus-visible {
+    outline: 4px solid #c33c24;
+    outline-offset: 4px;
+  }
+}

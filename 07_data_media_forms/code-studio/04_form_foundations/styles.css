@@ -1,0 +1,8 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.5; color: #17211d; background: #f4f0e7; }
+main { width: min(50rem, 100%); margin-inline: auto; padding-block: 3rem; }
+h1 { margin: 0; font-size: clamp(3rem, 8vw, 6rem); }
+.eyebrow { font-weight: 800; text-transform: uppercase; }
+form { margin-block-start: 3rem; }
+.field, .ticket-group, .check-row { margin-block: 1rem; }
+input, select, textarea, button { max-width: 100%; font: inherit; }

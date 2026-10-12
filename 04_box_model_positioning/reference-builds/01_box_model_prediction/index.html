@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Box Model Prediction - Solution</title><link rel="stylesheet" href="styles.css" /></head>
+  <body><main><header><p class="eyebrow">Lesson 04</p><h1>Predict the Final Width</h1><p>Calculated answers with explicit sizing models.</p></header>
+    <section class="problem"><div class="box box-a">Box A</div><pre><code>width: 300px; padding: 20px; border: 4px;<br />box-sizing: content-box;</code></pre><p class="answer">Rendered width: 348px</p></section>
+    <section class="problem"><div class="box box-b">Box B</div><pre><code>width: 300px; padding: 20px; border: 4px;<br />box-sizing: border-box;</code></pre><p class="answer">Rendered width: 300px</p></section>
+    <section class="problem parent-c"><div class="box box-c">Box C</div><pre><code>parent: 900px; width: 50%; padding: 2rem;<br />box-sizing: content-box;</code></pre><p class="answer">Rendered width: 514px</p></section>
+    <section class="problem parent-d"><div class="box box-d">Box D</div><pre><code>parent: 36rem; width: 100%; max-width: 60rem;<br />box-sizing: border-box;</code></pre><p class="answer">Rendered width: 36rem (576px at a 16px root size)</p></section>
+  </main></body>
+</html>

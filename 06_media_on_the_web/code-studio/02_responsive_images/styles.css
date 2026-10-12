@@ -1,0 +1,11 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 1rem; font-family: system-ui, sans-serif; color: #17211d; background: #f4f0e7; }
+main { width: min(70rem, 100%); margin-inline: auto; }
+header, section { padding-block: 3rem; }
+section { border-top: 1px solid #9caa9f; }
+h1 { margin: 0; font-size: clamp(3rem, 8vw, 6rem); }
+.eyebrow { font-weight: 800; text-transform: uppercase; }
+.content-image { display: block; width: min(100%, 56rem); height: auto; }
+.css-hero { min-height: 24rem; display: grid; place-items: center; padding: 2rem; color: #fff; background-color: #17211d; background-size: cover; background-position: center; font-size: clamp(2rem, 8vw, 6rem); }
+
+/* TASK: Add a JPEG background first, followed by image-set(). */

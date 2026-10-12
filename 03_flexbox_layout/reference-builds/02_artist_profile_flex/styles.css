@@ -1,0 +1,43 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.55; color: #17211d; background: #f4f0e7; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: #126754; text-underline-offset: 0.2em; }
+:focus-visible { outline: 4px solid #bd3c24; outline-offset: 4px; }
+.site-header, .hero, .section, .site-footer { width: min(70rem, calc(100% - 2rem)); margin-inline: auto; }
+.site-header { padding-block: 1.25rem; border-bottom: 2px solid #17211d; }
+.logo { color: #17211d; font-size: 1.3rem; font-weight: 850; text-decoration: none; }
+.nav-list { margin: 0; padding: 0; list-style: none; }
+.hero { padding-block: clamp(3rem, 9vh, 7rem); }
+.hero h1 { margin: 0; font-size: clamp(3.5rem, 10vw, 7rem); line-height: 0.95; }
+.hero-copy { max-width: 42rem; }
+.hero-copy > p:not(.eyebrow) { font-size: 1.2rem; }
+.hero-media { margin: 0; }
+.hero-media img { width: min(100%, 28rem); }
+.eyebrow, time { font-size: 0.8rem; font-weight: 800; text-transform: uppercase; }
+.button { display: inline-block; padding: 0.75rem 1rem; color: #fff; background: #17211d; }
+.section { padding-block: 3rem; border-top: 1px solid #9caa9f; }
+.section > p { max-width: 62ch; }
+.release-card, .show-card { padding: 1.25rem; border: 2px solid #17211d; background: #fff; }
+.show-card a { display: inline-block; padding-block-start: 1rem; font-weight: 750; }
+.site-footer { padding-block: 2rem; border-top: 2px solid #17211d; }
+
+/* Header: nav takes remaining space; the logo keeps its intrinsic width. */
+.site-header { display: flex; align-items: center; gap: 1.5rem; }
+.logo { flex-shrink: 0; }
+.site-header nav { margin-left: auto; }
+.nav-list { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 1rem; }
+
+/* Hero: both children have a basis and may wrap instead of overflowing. */
+.hero { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; }
+.hero-copy { flex: 1 1 28rem; }
+.hero-media { flex: 1 1 20rem; }
+
+/* Release: fixed artwork basis plus flexible text creates a media object. */
+.release-card { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem; }
+.release-card img { flex: 0 1 20rem; }
+.release-card > div { flex: 1 1 18rem; }
+
+/* Shows: cards share space, wrap, and align their final links. */
+.shows-list { display: flex; flex-wrap: wrap; align-items: stretch; gap: 1rem; }
+.show-card { flex: 1 1 14rem; display: flex; flex-direction: column; }
+.show-card a { align-self: flex-start; margin-top: auto; }

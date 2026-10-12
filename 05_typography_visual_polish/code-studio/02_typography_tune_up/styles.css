@@ -1,0 +1,7 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 1rem; background: #f4f0e7; color: #17211d; }
+main { width: min(70rem, 100%); margin-inline: auto; }
+.hero { padding-block: 5rem; }
+article { padding-block: 3rem; border-top: 1px solid #9caa9f; }
+
+/* Build the type system below. */

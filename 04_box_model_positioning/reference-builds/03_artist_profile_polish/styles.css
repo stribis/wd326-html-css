@@ -1,0 +1,33 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.55; color: #17211d; background: #f4f0e7; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: #126754; }
+.site-header, .hero, .section, .site-footer { width: min(70rem, calc(100% - 2rem)); margin-inline: auto; }
+.site-header { display: flex; align-items: center; gap: 1.5rem; padding-block: 1.25rem; border-bottom: 2px solid; }
+.logo { flex-shrink: 0; font-size: 1.3rem; font-weight: 850; }
+.site-header nav { margin-left: auto; }
+.nav-list { display: flex; gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.hero { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; padding-block: 5rem; }
+.hero-copy { flex: 1 1 28rem; }
+.hero img { flex: 1 1 20rem; width: min(100%, 28rem); }
+h1 { margin: 0; font-size: clamp(3.5rem, 10vw, 7rem); line-height: .95; }
+.section { min-height: 35rem; padding-block: 3rem; border-top: 1px solid #9caa9f; }
+.release-card { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.release-card img { flex: 0 1 20rem; }
+.release-card > div { flex: 1 1 18rem; }
+.shows-list { display: flex; flex-wrap: wrap; gap: 1rem; }
+.show-card { flex: 1 1 16rem; }
+.release-card, .show-card { padding: 1.5rem; border: 2px solid #17211d; background: #fff; }
+.release-badge, .back-to-top { padding: .65rem .8rem; color: #fff; background: #bd3c24; font-weight: 800; }
+.site-footer { padding-block: 2rem; border-top: 2px solid; }
+:focus-visible { outline: 4px solid #bd3c24; outline-offset: 4px; }
+
+/* The card establishes the badge's containing block. */
+.release-card { position: relative; }
+.release-badge { position: absolute; inset-block-start: 1rem; inset-inline-end: 1rem; z-index: 1; }
+
+/* Sticky headings remain in flow and stop when their section ends. */
+.section-title { position: sticky; top: 0; z-index: 2; margin: 0 0 1.5rem; padding: .75rem; background: #d8b83f; }
+
+/* This control is intentionally attached to the viewport. */
+.back-to-top { position: fixed; inset-block-end: 1rem; inset-inline-end: 1rem; z-index: 3; }

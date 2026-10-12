@@ -1,0 +1,11 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #18211e; background: #edf0ec; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { width: min(62rem, calc(100% - 2rem)); margin-inline: auto; padding-block: 3rem; }
+.eyebrow { color: #176b5a; font-weight: 800; text-transform: uppercase; }
+h1 { max-width: 14ch; font-size: clamp(2.5rem, 7vw, 5.5rem); line-height: 1; }
+.pattern { margin-block: 1rem; padding: 1.25rem; border: 2px solid #89938e; border-radius: 8px; background: #fffdf8; }
+.pattern h2 { margin-block-start: 0; }
+button, input { font: inherit; }
+button, a { min-height: 42px; }
+/* TODO: Add useful styles for the native patterns and all interaction states. */

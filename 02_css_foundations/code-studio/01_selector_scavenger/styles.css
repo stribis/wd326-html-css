@@ -1,0 +1,31 @@
+/*
+  Selector Scavenger Hunt
+  Complete targets 1-10 from README.md without editing index.html.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: #151923;
+  background: #f7f4ed;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body > * {
+  width: min(1100px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+/* Add your ten selector rules below. */

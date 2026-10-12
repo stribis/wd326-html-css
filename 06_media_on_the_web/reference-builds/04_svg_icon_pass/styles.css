@@ -1,0 +1,16 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 1rem; font-family: system-ui, sans-serif; color: #17211d; background: #f4f0e7; }
+main { width: min(60rem, 100%); margin-inline: auto; padding-block: 5rem; }
+h1 { margin: 0; font-size: clamp(3rem, 8vw, 6rem); }
+.eyebrow { font-weight: 800; text-transform: uppercase; }
+.controls { display: flex; flex-wrap: wrap; gap: 1rem; margin-block: 3rem; }
+button { min-height: 44px; border: 2px solid #17211d; color: #fff; background: #17211d; cursor: pointer; }
+.text-button { display: inline-flex; align-items: center; gap: .65rem; padding: .7rem 1rem; }
+.icon-button { min-width: 44px; padding: .6rem; }
+button svg { width: 1.4rem; height: 1.4rem; }
+
+/* Inline icons inherit the control color instead of hard-coding paint. */
+svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.signal-graphic { width: min(100%, 30rem); padding: 1rem; border: 2px solid; color: #126754; }
+button:hover { color: #17211d; background: #d8b83f; }
+button:focus-visible { outline: 4px solid #bd3c24; outline-offset: 4px; }

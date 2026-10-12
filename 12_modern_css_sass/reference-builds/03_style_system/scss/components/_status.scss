@@ -1,0 +1,17 @@
+@use "sass:map";
+@use "../settings" as s;
+
+.status {
+  margin: 0;
+  padding: s.$space-unit * 2;
+  border-inline-start: s.$space-unit solid var(--status-color);
+  background: color-mix(in srgb, var(--status-color), white 88%);
+  color: s.$ink;
+}
+
+// Only the requested map entries generate output.
+@each $name, $color in s.$statuses {
+  .status--#{$name} {
+    --status-color: #{map.get(s.$statuses, $name)};
+  }
+}

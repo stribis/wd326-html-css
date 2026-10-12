@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anchored Hint</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Create your profile</h1>
+      <form>
+        <div class="label-row">
+          <label for="display-name">Display name</label>
+          <button class="hint-trigger" type="button" popovertarget="name-hint" aria-label="Display name help">?</button>
+        </div>
+        <input id="display-name" name="display-name" autocomplete="nickname" />
+        <button type="submit">Save profile</button>
+      </form>
+      <aside id="name-hint" class="hint" popover>Your display name is public. It can contain spaces and punctuation.</aside>
+    </main>
+  </body>
+</html>
